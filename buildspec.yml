@@ -20,6 +20,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - echo test
       - echo Pushing the Docker images...
       - docker push $ECR_REPOSITORY_URI:latest
       - docker push $ECR_REPOSITORY_URI:$IMAGE_TAG
